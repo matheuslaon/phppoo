@@ -1,0 +1,137 @@
+<div class="planos-principal">
+    <div class="texto-planos">
+        <p class="menos-aluguel">Menos de um aluguel ao ano</p>
+        <p class="titulo-aluguel">Dono, Conheça nossos planos</p>
+        <p class="texto-aluguel">
+            Aqui na Mell.ro trabalhamos para descomplicar o aluguel,
+            oferecendo planos. É cobrada uma mensalidade descontada
+            do valor do pagamento do aluguel, ou seja,
+            só quando o imóvel está alugado.
+        </p>
+    </div>
+    <div class="planos">
+        <div class="garantido">
+            <div class="icone-planos">
+                <img src="https://mellro.com/wp-content/uploads/2022/01/escudo.png" alt="icone">
+            </div>
+            <div>
+                <p class="titulo-planos">Aluguel Garantido</p>
+                <p class="descricao-planos">5% /mês <span>descontado do pagamento do aluguel</span></p>
+                <a href="https://mellro.com/garanta-seu-aluguel-com-a-mellro/" class="link-planos" target="_blank">Saiba mais sobre o plano</a>
+            </div>
+        </div>
+        <div class="pratico">
+            <div class="icone-planos">
+                <img src="https://mellro.com/wp-content/uploads/2022/01/Grande.png" alt="icone">
+            </div>
+            <div>
+                <p class="titulo-planos">Aluguel Prático</p>
+                <p class="descricao-planos">R$ 29,90 /mês <span>descontado do pagamento do aluguel</span></p>
+                <a href="https://mellro.com/aluguel-pratico/" class="link-planos" target="_blank">Saiba mais sobre o plano</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.planos-principal {
+    max-width: 1136px;
+    max-height: 380px;
+    display: grid;
+    grid-template-columns: 512px 512px;
+    grid-gap: 80px;
+    align-items: center;
+}
+
+.garantido, .pratico {
+    max-width: 464px;
+    max-height: 134px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-gap: 16px;
+    border: 1px solid #e9ecef;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.garantido {
+    margin-bottom: 57px;
+}
+
+.menos-aluguel {
+    font-family: 'Lato';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #74C0FC;
+}
+
+.titulo-aluguel {
+    font-family: 'Lato';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 38px;
+    letter-spacing: 0.6px;
+    text-align: left;
+    margin: 8px 0;
+}
+
+.texto-aluguel {
+    font-family: 'Lato';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #868E96;
+}
+
+.titulo-plano {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+}
+
+.descricao-planos {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    color: #495057;
+    margin: 8px 0;
+}
+
+.descricao-planos span {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #868E96;
+}
+
+.link-planos {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    color: #339af0;
+    text-decoration: underline;
+    margin-bottom: 17px;
+}
+</style>

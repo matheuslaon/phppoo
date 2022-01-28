@@ -1,0 +1,18 @@
+{
+    "name": "laon/estudosphp",
+    "description": "estudos php",
+    "require": {
+        "cocur/slugify": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laon\\Estudosphp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matheus",
+            "email": "matheusmachado@laon.com.br"
+        }
+    ]
+}
