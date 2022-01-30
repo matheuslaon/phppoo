@@ -61,7 +61,14 @@
         }
 
         public function setStatus($status) {
-            $this->status = $status;
+            if ($status === false) {
+                $this->setTipo("");
+                $this->setDono("");
+                $this->setNumeroConta("");
+                $this->setSaldo("");
+            } else {
+                $this->status = $status;
+            }
         }
 
         // Métodos para executar ações, tais como sacar, depositar
@@ -88,18 +95,16 @@
             }
         }
 
-        public function fecharConta($nome, $tipo) {
-            $numeroConta = $this->getNumeroConta();
-            $cliente = $this->getDono();
-            $tipoConta = $this->getTipo();
+        public function fecharConta() {
+            $saldo = $this->getSaldo();
 
-            if ($cliente === $nome && $tipoConta === $tipo) {
-                $this->setNumeroConta("");
-                $this->setDono("");
-                $this->setTipo("");
-                echo "Conta encerrada com sucesso";
+            if ($saldo > 0) {
+                echo "Saque o dinheiro restante para poder fechar a conta!";
+            } else if ($saldo < 0){
+                echo "Saldo negativo, quite seus débitos para efetuar o fechamento!";
             } else {
-                echo "Nome ou tipo de conta inválido, por favor verifique os dados inseridos!";
+                $this->setStatus(false);
+                echo "Conta encerrada com sucesso!";
             }
         }
 
@@ -156,5 +161,11 @@
     echo "<br>";
     $contaBele->abrirConta("Isabele Elise", "CP");
     echo "<br>";
+    echo $contaMatheus->getSaldo();
+    echo "<br>";
+    $contaMatheus->sacar(50);
+    echo "<br>";
     $contaMatheus->fecharConta("Matheus Machado", "CP");
+    echo "<br>";
+    print_r($contaMatheus);
 ?>
