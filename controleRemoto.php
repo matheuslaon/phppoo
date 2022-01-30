@@ -64,12 +64,16 @@
     public function maisVolume(){
       if ($this->getLigado()) {
         $this->setVolume($this->getVolume() + 5);
+      } else {
+        echo "TV desligada, não pode aumentar o volume!";
       }
     }
     
     public function menosVolume(){
       if ($this->getLigado()) {
         $this->setVolume($this->getVolume() - 5);
+      } else {
+        echo "TV desligada, não pode diminuir o volume!";
       }
     }
 
