@@ -44,6 +44,7 @@
                 $this->desafiado = $l1;
                 $this->desafiante = $l2;
             } else {
+                echo "Não podem lutar!.";
                 $this->setAprovada(false);
                 $this->desafiado = null;
                 $this->desafiante = null;

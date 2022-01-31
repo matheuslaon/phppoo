@@ -11,8 +11,7 @@
     
     echo "<pre>";
     $uec01 = new Luta();
-    $uec01->marcarLuta($l[0], $l[1]);
+    $uec01->marcarLuta($l[1], $l[0]);
     $uec01->lutar();
-
 
 ?>
