@@ -15,7 +15,7 @@
             $this->setTitulo($titulo);
             $this->setAutor($autor);
             $this->setTotalPaginas($totalPaginas);
-            $this->setLeitor($leitor);
+            $this->leitor = $leitor;
             $this->setAberto(false);
             $this->setPaginaAtual(1);
         }
@@ -76,6 +76,8 @@
             echo $this->getTitulo();
             echo "<br>";
             echo $this->getTotalPaginas() . " páginas";
+            echo "<br>";
+            echo "Sendo lido por " . $this->leitor->getNome();
         }
 
         public function abrir(){
