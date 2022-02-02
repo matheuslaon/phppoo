@@ -1,9 +1,21 @@
-<?php
-
-    abstract class Pessoa2 {
+<?php 
+    // require_once 'publicacao.php';
+    // require_once 'pessoa.php';
+    // require_once 'livro.php';
+    // $p = new Pessoa("Matheus Machado", 26, "Masculino");
+    // $l = new Livro("Memórias póstumas de Brás Cubas", "Machado de Assis", 500, $p);
+    // $l->detalhes();
+    // $l->abrir();
+    class Pessoa {
         private $nome;
         private $idade;
         private $sexo;
+
+        public function __construct($nome, $idade, $sexo){
+            $this->nome = $nome;
+            $this->idade = $idade;
+            $this->sexo = $sexo;
+        }
 
         public function getNome() {
             return $this->nome;
@@ -29,8 +41,8 @@
             $this->sexo = $sexo;
         }
 
-        public final function fazerAniv() {
-            $this->idade + 1;
+        public function fazerAniversario() {
+            $this->idade ++;
         }
     }
 
